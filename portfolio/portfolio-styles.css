@@ -1,0 +1,175 @@
+/* Resetting some base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #464547;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #292929;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+/* Header text container */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 400px; /* Default size */
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+/* Header navigation styles */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 30px;
+}
+
+.header-nav li {
+    margin-left: 35px;
+}
+
+.header-nav a {
+    color: #D58A28;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 126%;
+    font-family: "Katahdin Round";
+    transition: font-size 0.4s ease;
+}
+
+/* Shrink effect styles */
+.shrink-header {
+    padding: 10px 30px;
+}
+
+.shrink-header .logo {
+    width: 200px; /* Significantly smaller logo on scroll */
+}
+
+.shrink-header .header-nav a {
+    font-size: 126%; /* Keep the text size the same */
+}
+
+
+/* Color bar styling */
+.color-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #D58A28;
+}
+
+.color-bar h2 {
+    color: white;
+    font-family: "Katahdin Round";
+}
+
+/* Photo item (grid box) */
+.photo-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+
+/* Ensure the image fits nicely without being cropped */
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the box */
+    object-position: center; /* Center the image */
+}
+
+/* Overlay bar at the bottom of each box */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    height: 20%; /* Fixed height for the bar at the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text at the top of the overlay */
+    align-items: center;
+    box-sizing: border-box;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Service name text inside the bar */
+.overlay h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: auto; /* Push the text down within the overlay */
+	margin-top: -7px;
+    text-align: center;
+}
+
+/* Paragraph text inside the overlay */
+.overlay p {
+    font-size: 15px;
+    margin-top: auto; /* Push paragraph text to the bottom */
+	margin-bottom: 40px;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.photo-item:hover .overlay {
+    background-color: rgba(213, 138, 40, 1);
+    height: 100%; /* Expand only within the photo item */
+    justify-content: flex-start; /* Keep text aligned at the top of the expanded overlay */
+}
+
+/* On hover, fade in the paragraph */
+.photo-item:hover .overlay p {
+    opacity: 1;
+}
+
+
+/* Centered photo grid with a fixed number of columns */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
