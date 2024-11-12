@@ -1,0 +1,186 @@
+/* Resetting some base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #464547;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #292929;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+/* Header text container */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 400px; /* Default size */
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+/* Header navigation styles */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 30px;
+}
+
+.header-nav li {
+    margin-left: 35px;
+}
+
+.header-nav a {
+    color: #D58A28;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 126%;
+    font-family: "Katahdin Round";
+    transition: font-size 0.4s ease;
+}
+
+/* Shrink effect styles */
+.shrink-header {
+    padding: 10px 30px;
+}
+
+.shrink-header .logo {
+    width: 200px; /* Significantly smaller logo on scroll */
+}
+
+.shrink-header .header-nav a {
+    font-size: 126%; /* Keep the text size the same */
+}
+
+
+/* Color bar styling */
+.color-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #D58A28;
+}
+
+.color-bar h2 {
+    color: white;
+    font-family: "Katahdin Round";
+}
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Container for the contact form */
+#contact-section {
+    background-color: #292929 ;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+	color: #D58A28;
+	font-family: "Katahdin Round";
+}
+.contain-contact{
+	padding-bottom: 700px;
+}
+.contact-container p {
+    text-align: center;
+    margin-bottom: 30px;
+	color: #D58A28;
+	font-family: "Trebuchet MS", Calibri, "Segoe UI";
+}
+
+/* Form styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+	color: #D58A28;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	font-family: "Trebuchet MS", Calibri, "Segoe UI";
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.submit-button {
+    background-color: #D58A28;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-section {
+        padding: 30px 15px;
+    }
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

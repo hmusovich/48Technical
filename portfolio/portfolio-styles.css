@@ -73,8 +73,6 @@ header {
 .shrink-header .header-nav a {
     font-size: 126%; /* Keep the text size the same */
 }
-
-
 /* Color bar styling */
 .color-bar {
     display: flex;
@@ -82,6 +80,7 @@ header {
     align-items: center;
     height: 70px;
     background-color: #D58A28;
+	padding-top: 30px;
 }
 
 .color-bar h2 {
@@ -89,80 +88,101 @@ header {
     font-family: "Katahdin Round";
 }
 
-/* Photo item (grid box) */
-.photo-item {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    width: 100%;
+.portfolio {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.portfolio-credits {
+	padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.portfolio-credits li {
+	color: white;
+	font-family: "Trebuchet MS", Calibri, "Segoe UI";
 }
 
-/* Ensure the image fits nicely without being cropped */
-.photo-item img {
+h2 {
+    text-align: center;
+    color: #D58A28;
+    font-family: "Katahdin Round";
+    margin-bottom: 30px;
+}
+
+/* General styling for portfolio items */
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.portfolio-photo {
+    flex: 1;
+    position: relative;
+}
+
+.portfolio-description {
+    flex: 1;
+    color: white;
+    font-family: "Trebuchet MS", Calibri, "Segoe UI";
+}
+
+.portfolio-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #D58A28;
+	font-family: "Katahdin Round";
+
+}
+
+.portfolio-description p {
+    font-size: 18px;
+    line-height: 1.5;
+	font-family: "Trebuchet MS", Calibri, "Segoe UI";
+}
+
+/* Alternating layout */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.photo-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio while covering the box */
-    object-position: center; /* Center the image */
 }
 
-/* Overlay bar at the bottom of each box */
-.overlay {
+.portfolio-img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-img.active {
+    display: block;
+}
+
+.prev-arrow,
+.next-arrow {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border: none;
     padding: 10px;
-    height: 20%; /* Fixed height for the bar at the bottom */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align text at the top of the overlay */
-    align-items: center;
-    box-sizing: border-box;
-    transition: height 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
 }
 
-/* Service name text inside the bar */
-.overlay h3 {
-    font-size: 18px;
-    margin: 0;
-    margin-bottom: auto; /* Push the text down within the overlay */
-	margin-top: -7px;
-    text-align: center;
+.prev-arrow {
+    left: 10px;
 }
 
-/* Paragraph text inside the overlay */
-.overlay p {
-    font-size: 15px;
-    margin-top: auto; /* Push paragraph text to the bottom */
-	margin-bottom: 40px;
-    opacity: 0; /* Hidden initially */
-    transition: opacity 0.3s ease;
-}
-
-/* Hover effect */
-.photo-item:hover .overlay {
-    background-color: rgba(213, 138, 40, 1);
-    height: 100%; /* Expand only within the photo item */
-    justify-content: flex-start; /* Keep text aligned at the top of the expanded overlay */
-}
-
-/* On hover, fade in the paragraph */
-.photo-item:hover .overlay p {
-    opacity: 1;
-}
-
-
-/* Centered photo grid with a fixed number of columns */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the grid */
+.next-arrow {
+    right: 10px;
 }
 
 /* Footer styling */
