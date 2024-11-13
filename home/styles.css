@@ -5,6 +5,17 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+@font-face {
+    font-family: 'Katahdin Round';
+    src: url("../Fonts/KatahdinRound.otf") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the font in your CSS */
+h1, h2, h3 {
+    font-family: 'Katahdin Round', Arial, sans-serif;
+}
 
 /* Body styling */
 body {
@@ -76,7 +87,7 @@ header {
 /* About section */
 .About {
     text-align: center;
-	padding-bottom: 500px;
+	padding-bottom: 20px;
 }
 
 .profile {
@@ -192,6 +203,38 @@ header {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto; /* Center the grid */
+}
+/* Image Gallery Section */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+	margin-top: 0 auto;
+	padding-top: 0 auto;
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Footer styling */

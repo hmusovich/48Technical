@@ -6,6 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
+@font-face {
+    font-family: 'Katahdin Round';
+    src: url("../Fonts/KatahdinRound.otf") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Body styling */
 body {
     background-color: #464547;
