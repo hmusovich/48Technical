@@ -54,7 +54,23 @@ header {
     display: flex;
     padding: 30px;
 }
+/* Define the continuous jumping animation */
+@keyframes continuous-jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+/* Apply the animation on hover and make it loop infinitely */
+.header-nav li:hover {
+    animation: continuous-jump 0.6s ease-in-out infinite;
+}
 .header-nav li {
     margin-left: 35px;
 }
